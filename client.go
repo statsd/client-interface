@@ -15,4 +15,6 @@ type Client interface {
 
 	Duration(name string, duration time.Duration) error
 	Histogram(name string, value int) error
+
+	Flush() error
 }
