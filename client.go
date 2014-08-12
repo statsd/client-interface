@@ -3,8 +3,6 @@ package statsd
 import "time"
 
 type Client interface {
-	Prefix(string)
-
 	Gauge(name string, value int) error
 
 	Incr(name string) error
