@@ -14,7 +14,7 @@ type Client interface {
 	Duration(name string, duration time.Duration) error
 	Histogram(name string, value int) error
 
-	Annotate(name string, fmt string, args ...string) error
+	Annotate(name string, fmt string, args ...interface{}) error
 
 	Flush() error
 }
